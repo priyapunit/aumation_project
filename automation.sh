@@ -16,6 +16,7 @@ tar -cvf /tmp/"$my_name"-httpd-"$timestamp".tar /var/log/apache2/*.log
 
 aws s3 cp /tmp/"$my_name"-httpd-"$timestamp".tar s3://"$s3_bucket"/
 
+
 inventory_file="/var/www/html/inventory.html"
 
 if [ -f "$inventory_file" ]; then
